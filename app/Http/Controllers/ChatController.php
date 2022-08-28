@@ -17,6 +17,8 @@ class ChatController extends Controller
 
     public function show(Room $room): View
     {
-        return view('chat.room', compact('room'));
+        $messages = $room->messages()->with(['user'])->latest()->get();
+
+        return view('chat.room', compact('room', 'messages'));
     }
 }
