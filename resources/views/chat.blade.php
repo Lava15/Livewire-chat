@@ -6,14 +6,15 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <h2 class="mb-6">Rooms</h2>
+        <div class="h-full mx-auto sm:px-6 lg:px-8">
+            <h2 class="mb-6 w-1/2 mx-auto bg-indigo-700 text-center font-bold text-white text-2xl border border-white border-2 rounded-xl shadow-lg">
+                Rooms</h2>
 
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white mx-auto rounded-lg shadow-lg sm:rounded-lg w-1/2">
                 @foreach($rooms as $room)
-                    <div>
-                        <a href="{{ route('chat.room', $room) }}">{{ $room->title }}</a>
-
+                    <div class="text-start">
+                        <a class="p-10 block w-full hover:bg-gray-200"
+                           href="{{ route('chat.room', $room) }}">{{ $room->title }}</a>
                     </div>
                 @endforeach
             </div>
