@@ -4,7 +4,7 @@
             <div class="mb-5 pb-5 border-b">
                 <div>
                     <h2>{{ $message->user->name }}</h2>
-{{--                    <time>{{ $message->created_at->toDateTimeString() }}</time>--}}
+                    <time>{{ $message->created_at->diffForHumans() }}</time>
                     <span>{{ $message->body }}</span>
                 </div>
             </div>
